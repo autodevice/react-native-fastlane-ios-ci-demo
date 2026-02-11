@@ -1,15 +1,19 @@
-# react-native-fastlane-ios-ci-demo
+# RNFLIOSDemo
 
-React Native iOS CI demo using Fastlane for automating RN iOS builds
+A React Native iOS simulator demo app with Fastlane and CI/CD via GitHub Actions.
 
-## Overview
+## Build
 
-This repository is a demo project for [AutoDevice](https://autodevice.dev) CI integration.
+```bash
+npm install
+cd ios && pod install && cd ..
+cd ios && bundle install && bundle exec fastlane ios build
+```
 
-## Getting Started
+## CI/CD
 
-Coming soon.
+The GitHub Actions workflow builds the iOS simulator app using Fastlane and uploads it to AutoDevice on every push to `main`.
 
-## License
+### Required Secrets
 
-MIT
+- `AUTODEVICE_API_KEY` — API key for AutoDevice
